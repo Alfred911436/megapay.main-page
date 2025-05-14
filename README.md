@@ -1,1 +1,1 @@
-# megapay.main-page
+# Megapay.main-page
