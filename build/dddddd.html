@@ -1,0 +1,952 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MegaPay - Earn Money Online</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        root {
+    --blue: #007bff;
+    --indigo: #6610f2;
+    --purple: #6f42c1;
+    --pink: #e83e8c;
+    --red: #dc3545;
+    --orange: #fd7e14;
+    --yellow: #ffc107;
+    --green: #28a745;
+    --teal: #20c997;
+    --cyan: #17a2b8;
+    --white: #fff;
+    --gray: #6c757d;
+    --gray-dark: #343a40;
+    --primary: #007bff;
+    --secondary: #6c757d;
+    --success: #28a745;
+    --info: #35b817;
+    --warning: #ffc107;
+    --danger: #dc3545;
+    --light: #f8f9fa;
+    --dark: #343a40;
+    --breakpoint-xs: 0;
+    --breakpoint-sm: 576px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 992px;
+    --breakpoint-xl: 1200px;
+    --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+/* Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-family-sans-serif);
+    color: var(--gray-dark);
+    background-color: var(--light);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.container, .container-fluid {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+@media (min-width: 576px) {
+    .container {
+        max-width: 540px;
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        max-width: 720px;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        max-width: 960px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    }
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.col-12, .col-lg-6, .col-lg-4, .col-lg-8, .col-md-6, .col-md-4, .col-sm-6 {
+    position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-bottom: 18px;
+    padding-left: 15px;
+}
+
+@media (min-width: 768px) {
+    .col-md-4 {
+        flex: 0 0 33.333333%;
+        max-width: 33.333333%;
+    }
+    .col-md-6 {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}
+
+@media (min-width: 992px) {
+    .col-lg-4 {
+        flex: 0 0 33.333333%;
+        max-width: 33.333333%;
+    }
+    .col-lg-6 {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+    .col-lg-8 {
+        flex: 0 0 66.666667%;
+        max-width: 66.666667%;
+    }
+}
+
+.text-center {
+    text-align: center;
+}
+
+.mb-4, .mb-5 {
+    margin-bottom: 1.5rem;
+}
+.mb-5 {
+    margin-bottom: 3rem;
+}
+
+.mt-3 {
+    margin-top: 1rem;
+}
+
+.shadow {
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Header Styles */
+.app-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background-color: var(--white);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 15px 0;
+}
+
+.hearder-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hearder-logo-wrapper {
+    flex: 0 0 150px;
+}
+
+.logo-img {
+    max-height: 40px;
+}
+
+.header-menu-wrapper {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.hearder-nav {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.hearder-nav-item-active, .header-nav-item {
+    margin: 0 15px;
+    position: relative;
+
+}
+
+.hearder-nav-item-active a, .header-nav-item a {
+    color:#0a0a0a;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.hearder-nav-item-active a {
+    color: var(--info);
+    padding: 3px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color:var(--light);
+    border: #28a745 1px solid;
+    border-radius: 16px;
+}
+.hearder-nav-item-active a:hover{
+    text-decoration: underline;
+}
+
+.header-nav-item a:hover {
+    color: var(--success);
+    border:#28a745 1px solid;
+    padding: 3px;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    width: 300px;
+    border-radius: 16px;
+    text-decoration: none;
+}
+
+.header-nav-item-dd-t .dropdown-container {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: var(--white);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    text-decoration: none;
+    padding: 10px 0;
+    min-width: 200px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s;
+    z-index: 100;
+}
+
+.header-nav-item-dd-t:hover .dropdown-container {
+    opacity: 1;
+    visibility: visible;
+}
+
+.dropdown-nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.hearder-nav-dd-item a {
+    display: block;
+    padding: 8px 20px;
+    color: var(--gray-dark);
+    transition: all 0.3s;
+}
+
+.hearder-nav-dd-item a:hover {
+    background-color: var(--light);
+    border-radius: 20px;
+    color: var(--success);
+    padding-left: 25px;
+}
+
+.hearder-cta-wrapper a {
+    display: inline-block;
+    padding: 8px 30px;
+    background-color: var(--info);
+    color: var(--white);
+    border-radius: 20px;
+    font-weight: 500;
+    transition: all 0.3s;
+}
+
+.hearder-cta-wrapper a:hover {
+    background-color:var(--success);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(75, 247, 95, 0.3);
+}
+
+
+        /* Hero Section */
+        .hero-section {
+            padding: 150px 0 80px;
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4e8f0 100%);
+        }
+
+        .hero-about-content {
+            margin-bottom: 40px;
+        }
+
+        .fbcg-s-1 {
+            display: inline-block;
+            background-color: blue;
+            color: white;
+            padding: 6px 12px;
+            border-radius: 4px;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .hero-title-wrapper h1 {
+            font-size: 48px;
+            font-weight: 700;
+            color: var(--dark);
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .hero-subtitle {
+            font-size: 18px;
+            color: #636e72;
+            margin-bottom: 30px;
+            font-weight: 400;
+        }
+
+        .hero-image-container {
+            position: relative;
+            text-align: center;
+        }
+
+        .hero-about-img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Features Section */
+        .about-features-section {
+            padding: 80px 0;
+            background-color: white;
+        }
+
+        .section-title-wrapper h2 {
+            font-size: 36px;
+            font-weight: 700;
+            color: var(--dark);
+            margin-bottom: 20px;
+        }
+
+        .about-features-list {
+            margin-top: 40px;
+        }
+
+        .about-features-list-row {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 30px;
+            padding: 20px;
+            border-radius: 10px;
+            transition: all 0.3s;
+            background-color: #f8f9fa;
+        }
+
+        .about-features-list-row:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        .about-features-list-row-icon {
+            margin-right: 20px;
+            color: var(--primary);
+            font-size: 24px;
+        }
+
+        .about-features-list-row-text-1 {
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--dark);
+            margin-bottom: 5px;
+        }
+
+        .about-features-list-row-text-2 {
+            font-size: 16px;
+            color: #636e72;
+        }
+
+        .hero-cta-wrapper {
+            margin-top: 40px;
+        }
+
+        .hero-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--primary);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 30px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .hero-btn:hover {
+            background-color: var(--primary-dark);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(108, 92, 231, 0.3);
+        }
+
+        /* Bonus Section */
+        .bonus-section {
+            padding: 80px 0;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .bonus-wrapper {
+            position: relative;
+            text-align: center;
+            padding: 60px 20px;
+            z-index: 1;
+        }
+
+        .bonus-img-l, .bonus-img-r {
+            position: absolute;
+            height: 100%;
+            top: 0;
+            z-index: -1;
+        }
+
+        .bonus-img-l {
+            left: 0;
+        }
+
+        .bonus-img-r {
+            right: 0;
+        }
+
+        .bonus-1-1 {
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .bonus-1-2 {
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        .bonus-l-3 {
+            font-size: 48px;
+            font-weight: 800;
+            margin-bottom: 10px;
+            color: var(--warning);
+        }
+
+        .bonus-l-4 {
+            font-size: 18px;
+            margin-bottom: 30px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .c-btn-a {
+            background-color: white;
+            color: var(--primary);
+            font-weight: 700;
+        }
+
+        .c-btn-a:hover {
+            background-color: var(--light);
+            color: var(--primary-dark);
+        }
+
+        /* Footer Styles */
+        .footer {
+            background-color: var(--dark);
+            color: white;
+            padding: 60px 0 20px;
+        }
+
+        .footer-brand-img {
+            height: 40px;
+            margin-bottom: 20px;
+        }
+
+        .footer-about {
+            color: #b2bec3;
+            margin-bottom: 20px;
+        }
+
+        .footer-app-nav {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .footer-app-nav-col {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 8px 15px;
+            border-radius: 8px;
+        }
+
+        .footer-app-nav-col-item {
+            font-size: 20px;
+        }
+
+        .fanci-cs {
+            font-size: 14px;
+        }
+
+        .footer-col-title-wrapper {
+            margin-bottom: 20px;
+        }
+
+        .footer-col-title {
+            font-size: 18px;
+            font-weight: 600;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .footer-col-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 3px;
+            background-color: var(--primary);
+        }
+
+        .footer-col-nav {
+            list-style: none;
+        }
+
+        .footer-col-nav li {
+            margin-bottom: 12px;
+        }
+
+        .footer-col-nav a {
+            color: #b2bec3;
+            text-decoration: none;
+            transition: color 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .footer-col-nav a:hover {
+            color: white;
+        }
+
+        .footer-copyright {
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            text-align: center;
+            color: #b2bec3;
+            font-size: 14px;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            .header-menu-wrapper {
+                display: none;
+            }
+
+            .hearder-cta-wrapper {
+                display: none;
+            }
+
+            .toggle-button {
+                display: block;
+            }
+
+            .hero-title-wrapper h1 {
+                font-size: 36px;
+            }
+
+            .section-title-wrapper h2 {
+                font-size: 30px;
+            }
+
+            .bonus-1-2 {
+                font-size: 28px;
+            }
+
+            .bonus-l-3 {
+                font-size: 40px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero-section {
+                padding: 120px 0 60px;
+                text-align: center;
+            }
+
+            .hero-title-wrapper h1 {
+                font-size: 32px;
+            }
+
+            .about-features-list-row {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .about-features-list-row-icon {
+                margin-bottom: 15px;
+            }
+
+            .footer-col-m {
+                margin-bottom: 30px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .hero-title-wrapper h1 {
+                font-size: 28px;
+            }
+
+            .bonus-1-2 {
+                font-size: 24px;
+            }
+
+            .bonus-l-3 {
+                font-size: 36px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="app-header fixed">
+        <div class="container">
+            <div class="hearder-container">
+                <div class="hearder-logo-wrapper">
+                    <a class="hearder-brand" href="#">
+                        <img src="https://via.placeholder.com/150x50?text=MegaPay" class="img-fluid logo-img" alt="MegaPay Logo">
+                    </a>
+                </div>
+                <div class="header-menu-wrapper">
+                    <ul class="hearder-nav">
+                        <li class="hearder-nav-item">
+                            <a href="home-page.html">Home</a>
+                        </li>
+                        <li class="hearder-nav-item hearder-nav-item-active">
+                            <a href="about.html">About Us</a>
+                        </li>
+                        <li class="header-nav-item header-nav-item-dd-t">
+                            <a href="#">More <i class="fas fa-chevron-down"></i></a>
+                            <div class="dropdown-container">
+                                <ul class="dropdown-nav">
+                                    <li class="hearder-nav-dd-item">
+                                        <a href="payment.html">Payment</a>
+                                    </li>
+                                    <li class="hearder-nav-dd-item">
+                                        <a href="contact.html">Contact</a>
+                                    </li>
+                                    <li class="hearder-nav-dd-item">
+                                        <a href="term.html">Terms</a>
+                                    </li>
+                                    <li class="hearder-nav-dd-item">
+                                        <a href="privacy.html">Privacy Policy</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="hearder-cta-wrapper">
+                    <a href="register.html">Join Now</a>
+                </div>
+                <span class="toggle-button">
+                    <i class="fas fa-bars"></i>
+                </span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu-container">
+        <div class="container">
+            <div class="mobile-menu-wrapper">
+                <div class="mobile-menu-content">
+                    <div class="logo-wrapper">
+                        <a href="#">
+                            <img src="https://via.placeholder.com/150x50?text=MegaPay" class="img-fluid logo-img" alt="MegaPay Logo">
+                        </a>
+                        <span class="toggle-button close-btn">
+                            <i class="fas fa-times"></i>
+                        </span>
+                    </div>
+                    <ul class="hearder-mobile-nav">
+                        <li class="hearder-mobile-nav-item">
+                            <a href="home-page.html">Home</a>
+                        </li>
+                        <li class="hearder-mobile-nav-item active">
+                            <a href="about.html">About Us</a>
+                        </li>
+                        <li class="hearder-mobile-nav-item">
+                            <a href="payment.html">Payment</a>
+                        </li>
+                        <li class="hearder-mobile-nav-item">
+                            <a href="contact.html">Contact</a>
+                        </li>
+                        <li class="hearder-mobile-nav-item">
+                            <a href="term.html">Terms</a>
+                        </li>
+                        <li class="hearder-mobile-nav-item">
+                            <a href="privacy.html">Privacy Policy</a>
+                        </li>
+                    </ul>
+                    <div class="hearder-mobile-cta-wrapper">
+                        <a href="register.html">Join Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-section about-hero">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-12">
+                        <div class="hero-about-content">
+                            <span class="fbcg-s-1">
+                                Join Us
+                            </span>
+                            <div class="hero-title-wrapper">
+                                <h1>About us</h1>
+                            </div>
+                            <h3 class="hero-subtitle">Everything you need to know</h3>
+                            <p>When you join MegaPay, you join a community of millions of people who choose to share their opinions and complete offers in exchange for rewards. Every day, hundreds of brands you love turn to MegaPay for consumer insights, and the information shared by our community powers that research.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-12">
+                        <div class="hero-image-container">
+                            <div class="hero-char-l">
+                                <img src="https://via.placeholder.com/600x400?text=MegaPay" class="hero-about-img" alt="About MegaPay">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="about-features-section content-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-12 text-center">
+                        <img class="hero-about-img img-fluid" src="https://via.placeholder.com/600x500?text=Research" alt="Market Research">
+                    </div>
+                    <div class="col-12 col-lg-6">
+                        <div class="section-title-wrapper">
+                            <h2 class="about-features-text">The #1 Research Marketing Network</h2>
+                            <p class="about-features-text">MegaPay is an online community with over 15 million affiliates worldwide dedicated to making their voices heard by completing surveys. We open the window of communication between you and the brands you love most.</p>
+                            <div class="about-features-list">
+                                <div class="about-features-list-row">
+                                    <div class="about-features-list-row-left">
+                                        <div class="about-features-list-row-icon">
+                                            <i class="fas fa-check-circle"></i>
+                                        </div>
+                                        <div class="about-features-list-row-right">
+                                            <div class="about-features-list-row-text-1">Money for using social media</div>
+                                            <div class="about-features-list-row-text-2">Get paid to post!</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="about-features-list-row">
+                                    <div class="about-features-list-row-left">
+                                        <div class="about-features-list-row-icon">
+                                            <i class="fas fa-check-circle"></i>
+                                        </div>
+                                        <div class="about-features-list-row-right">
+                                            <div class="about-features-list-row-text-1">Award-winning support</div>
+                                            <div class="about-features-list-row-text-2">Support Available 24/7</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="about-features-list-row">
+                                    <div class="about-features-list-row-left">
+                                        <div class="about-features-list-row-icon">
+                                            <i class="fas fa-check-circle"></i>
+                                        </div>
+                                        <div class="about-features-list-row-right">
+                                            <div class="about-features-list-row-text-1">Instant Payments</div>
+                                            <div class="about-features-list-row-text-2">Withdraw funds from our system instantly!</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                           
+                        </div> 
+                        <div class="hero-cta-wrapper">
+                                <a class="hero-btn c-btn" href="register.html">
+                                    <span>Sign Up</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                </a>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bonus Section -->
+        <section class="bonus-section content-section">
+            <div class="container">
+                <div class="bonus-wrapper">
+                    <div class="bonus-1-1">
+                        <a href="register.html">Join Us</a>
+                    </div>
+                    <div class="bonus-1-2">What are you waiting for?</div>
+                    <div class="bonus-l-3">₦12,000.00 Bonus</div>
+                    <div class="bonus-l-4">Start your journey to financial freedom today.</div>
+                    <div class="hero-cta-wrapper">
+                        <a class="hero-btn c-btn c-btn-a" href="register.html">
+                            <span>Sign Up</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-12">
+                    <div class="footer-logo-wrapper">
+                        <a class="footer-brand" href="#">
+                            <img src="https://via.placeholder.com/150x50?text=MegaPay" class="footer-brand-img" alt="MegaPay Logo">
+                        </a>
+                        <div class="footer-about">
+                            <span>#1 Market Research Network</span>
+                        </div>
+                        <div class="footer-app-nav">
+                            <div class="footer-app-nav-col">
+                                <div class="footer-app-nav-col-item">
+                                    <i class="fab fa-apple"></i>
+                                </div>
+                                <div class="fanci-cs">Coming Soon</div>
+                            </div>
+                            <div class="footer-app-nav-col">
+                                <div class="footer-app-nav-col-item">
+                                    <i class="fab fa-android"></i>
+                                </div>
+                                <div class="fanci-cs">Coming Soon</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-12 footer-col-m">
+                    <div class="footer-col-title-wrapper">
+                        <h3 class="footer-col-title">Discover</h3>
+                    </div>
+                    <ul class="footer-col-nav">
+                        <li>
+                            <a href="register.html"><i class="fas fa-chevron-right"></i> Get Started</a>
+                        </li>
+                        <li>
+                            <a href="about.html"><i class="fas fa-chevron-right"></i> About MegaPay</a>
+                        </li>
+                        <li>
+                            <a href="register.html"><i class="fas fa-chevron-right"></i> Register</a>
+                        </li>
+                        <li>
+                            <a href="login.html"><i class="fas fa-chevron-right"></i> Login</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-4 col-12 footer-col-m">
+                    <div class="footer-col-title-wrapper">
+                        <h3 class="footer-col-title">Support</h3>
+                    </div>
+                    <ul class="footer-col-nav">
+                        <li>
+                            <a href="about.html"><i class="fas fa-chevron-right"></i> Help Center</a>
+                        </li>
+                        <li>
+                            <a href="term.html"><i class="fas fa-chevron-right"></i> Term of Use</a>
+                        </li>
+                        <li>
+                            <a href="privacy.html"><i class="fas fa-chevron-right"></i> Privacy Policy</a>
+                        </li>
+                        <li>
+                            <a href="trust.html"><i class="fas fa-chevron-right"></i> Trust Policy</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-copyright">
+                <span>Copyright © 2025 MegaPay. All rights reserved.</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            // Mobile menu toggle
+            $('.toggle-button').click(function() {
+                $('.mobile-menu-container').toggleClass('active');
+            });
+
+            // Close mobile menu
+            $('.close-btn').click(function() {
+                $('.mobile-menu-container').removeClass('active');
+            });
+
+            // Dropdown menu
+            $('.header-nav-item-dd-t').hover(function() {
+                $(this).find('.dropdown-container').stop().fadeIn(200);
+            }, function() {
+                $(this).find('.dropdown-container').stop().fadeOut(200);
+            });
+
+            // Smooth scrolling for anchor links
+            $('a[href*="#"]').on('click', function(e) {
+                e.preventDefault();
+                $('html, body').animate(
+                    {
+                        scrollTop: $($(this).attr('href')).offset().top,
+                    },
+                    500,
+                    'linear'
+                );
+            });
+        });
+    </script>
+</body>
+</html>
